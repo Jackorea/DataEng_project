@@ -36,7 +36,7 @@ class TmdbSpiderSpider(scrapy.Spider):
             # Step 2: Infinite scroll to load up to 100 movies
             total_movies = 0  # Number of movies currently loaded
             last_movie_count = -1  # To track if new movies are being added
-            movie_limit = 10  # Limit the number of movies to crawl
+            movie_limit = 1000  # Limit the number of movies to crawl
 
             while total_movies < movie_limit:
                 # Scroll to the bottom of the page
