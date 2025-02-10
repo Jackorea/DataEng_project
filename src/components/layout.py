@@ -43,20 +43,12 @@ app_layout = html.Div([
                     text_auto=True
                 )
             ),
-            # dcc.Graph(
-            #     id="success-ratio",
-            #     figure=px.pie(
-            #         names=budget_vs_revenue_data["Success"].value_counts().index,
-            #         values=budget_vs_revenue_data["Success"].value_counts().values,
-            #         title="Proportion de films Rentables vs Non Rentables (rentable si RSI > 1)"
-            #     )
-            # )
             dcc.Graph(
                 id="success-ratio",
                 figure=px.pie(
                     names=budget_vs_revenue_data[budget_vs_revenue_data["Success"].isin(["Rentable", "Non Rentable"])]["Success"].value_counts().index,
                     values=budget_vs_revenue_data[budget_vs_revenue_data["Success"].isin(["Rentable", "Non Rentable"])]["Success"].value_counts().values,
-                    title="Proportion de films Rentables vs Non Rentables (rentable si RSI >= 1)"
+                    title="Proportion de films Rentables vs Non Rentables (rentable si RSI > 1)"
                 )
             )
         ]),

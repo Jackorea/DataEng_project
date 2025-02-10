@@ -2,43 +2,26 @@ version: '3.8'
 
 services:
   mongodb:
-    image: mongo
-    container_name: mongodb_container
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
-      - mongo_data:/data/db  
+      - mongo_data:/data/db
 
-  python-app:
-    build:
-      context: . 
-      dockerfile: Dockerfile  
+  web:
+    build: .
+    container_name: dataeng_project
     depends_on:
       - mongodb
     environment:
       - MONGO_URI=mongodb://mongodb:27017/
-    volumes:
-      - ./movieScraper/movieScraper/spiders:/app
-    command: ["python", "script.py"]
-
-
-  dashboard:
-    build:
-      context: .  
-      dockerfile: movieScraper/movieScraper/spiders/Dockerfile  
-    depends_on:
-      - mongodb
-    environment:
-      - MONGO_URI=mongodb://mongodb:27017/
-    volumes:
-      - ./movieScraper/movieScraper/spiders:/app
     ports:
       - "5001:5000" 
-      - "8501:8501"  
-    command: ["python", "dashboard.py"]
-
-networks:
-  my_network:
+      - "8050:8050"
+    volumes:
+      - .:/app
 
 volumes:
-  mongo_data:  
+  mongo_data:

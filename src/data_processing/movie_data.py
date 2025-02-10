@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import re
 from database.mongodb_connector import collection
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 def load_movies():
     """ Load movie data from MongoDB """

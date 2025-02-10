@@ -127,6 +127,8 @@ Récupération des données depuis MongoDB et affichage sous forme de tableaux e
 
 ### 1. Nombre de films par genre:
 
+![](images/1.png)
+
 L'analyse des 880 films les plus populaires sur TMDB montre une prédominance des genres Action (347 films), Drame (273 films) et Aventure (251 films). Ces trois genres dominent probablement en raison de leur attrait universel et de leur capacité à générer de fortes recettes au box-office, notamment grâce à des franchises bien établies et des effets spéciaux spectaculaires.
 
 À l'opposé, les genres les moins représentés sont le Western (8 films), le Téléfilm (5 films) et le Documentaire (6 films). Cela peut s'expliquer par un public cible plus restreint et une demande plus faible sur les plateformes de diffusion de films populaires.
@@ -136,6 +138,8 @@ L'analyse des 880 films les plus populaires sur TMDB montre une prédominance de
 ### 2. Rentabilité des films:
 
 #### 2.1 Répartition de la rentabilité des films:
+
+![](images/2.1.png)
 
 Inférieur à -50% : 90 films
 
