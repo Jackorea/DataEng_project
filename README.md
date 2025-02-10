@@ -155,6 +155,8 @@ La majorité des films les plus populaires sont rentables, avec 420 films dépas
 
 #### 2.2 Proportion de films rentables vs non rentables:
 
+![](images/2.2.png)
+
 Rentables : 420 films (70.8%)
 
 Non rentables : 173 films (29.2%)
@@ -164,6 +166,8 @@ Le taux élevé de rentabilité montre que la sélection des films populaires fa
 - **Prédiction :** Avec la montée en puissance des plateformes de streaming et des stratégies de diffusion hybride, on pourrait s'attendre à une augmentation des films à rentabilité plus faible, compensée par des abonnements plutôt que par des entrées en salles.
 
 ### 3. Score d'évaluation par genre:
+
+![](images/3.png)
 
 **Top 3 des genres par score moyen:**
 
@@ -187,6 +191,8 @@ Aventure (71.6)
 
 #### 4.1 Distribution du RSI (Retour sur Investissement):
 
+![](images/4.1.png)
+
 RSI entre 0 et 5 : 309 films
 
 RSI entre -5 et 0 : 112 films
@@ -196,6 +202,8 @@ RSI entre 5 et 10 : 104 films
 La majorité des films ont un RSI modéré, tandis que peu atteignent des valeurs extrêmes.
 
 #### 4.2 Corrélation entre Budget et Recette:
+
+![](images/4.2.png)
 
 Film avec la plus haute recette : "Avatar" (2.9B USD)
 
@@ -209,6 +217,8 @@ Cela illustre que même des films ayant de grosses recettes peuvent être non re
 
 ### 5. Rentabilité et score d'évaluation:
 
+![](images/5.png)
+
 On observe une corrélation positive entre la rentabilité et le score d'évaluation : en moyenne, les films mieux notés sont plus rentables. Cela suggère que la satisfaction du public joue un rôle clé dans le succès financier d'un film.
 
 - **Prédiction :** Les productions avec des critiques positives et un bon bouche-à-oreille continueront à être privilégiées par les studios.
@@ -216,6 +226,9 @@ On observe une corrélation positive entre la rentabilité et le score d'évalua
 ### 6. Acteurs et Réalisateurs:
 
 #### 6.1 Acteurs
+
+![](images/6.1.png)
+![](images/6.2.png)
 
 - Acteur le plus présent : Idris Elba (13 films)
 
@@ -230,6 +243,9 @@ Tom Hanks
 Emma Watson
 
 #### 6.2 Réalisateurs
+
+![](images/6.3.png)
+![](images/6.4.png)
 
 - Réalisateur ayant réalisé le plus de films : Steven Spielberg (7 films)
 
@@ -249,11 +265,15 @@ Peter Jackson
 
 ### 7. Distribution des durées de films:
 
+![](images/7.png)
+
 La plupart des films ont une durée d’environ 100 minutes (177 films), suivis de 120 minutes (138 films), puis 110 minutes (116 films) et 90 minutes (114 films).
 
 Cela montre une préférence pour des films d’une durée moyenne comprise entre 90 et 120 minutes, optimisant l’expérience cinématographique tout en maximisant les séances en salle.
 
 ### 8. Rentabilité et durée de films:
+
+![](images/8.png)
 
 Les films de 80 minutes et 200 minutes affichent la rentabilité la plus élevée, mais leur faible échantillon rend ces résultats peu fiables.
 
