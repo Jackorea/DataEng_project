@@ -90,3 +90,22 @@ DOWNLOAD_DELAY = 2
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+
+import os
+
+# Define the absolute path to the "data" folder at the root of "DataEng_project"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))  # Move 3 levels up
+DATA_DIR = os.path.join(BASE_DIR, "data")  # Define the correct "data" folder path
+
+# Ensure Scrapy uses the correct "data" folder
+os.makedirs(DATA_DIR, exist_ok=True)
+
+# Automatically save all Scrapy output inside the correct "data/" folder
+FEEDS = {
+    os.path.join(DATA_DIR, "tmdb_spider.json"): {  # ✅ Save as JSON
+        "format": "json",
+        "encoding": "utf8",
+        "indent": 4
+    }
+}
