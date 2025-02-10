@@ -8,12 +8,10 @@ from dash.dependencies import Input, Output
 from server import app
 from data_processing.movie_data import process_movie_data
 from data_processing.features import get_top_actors, get_top_directors, get_top_actors_avg_profitability, get_top_directors_avg_profitability
-from data_processing.prediction import forecast_movie_releases
 
 genres_data, budget_vs_revenue_data, release_years_data, sorted_average_genre_ratings, roi_category_counts, moyenne_profitability_df, runtime_counts, avg_runtime_profitability = process_movie_data()
 top_actors_df = get_top_actors()
 top_directors_df = get_top_directors()
-forecast_data = forecast_movie_releases(release_years_data)
 top_actors_avg_profitability_df = get_top_actors_avg_profitability()
 top_directors_avg_profitability_df = get_top_directors_avg_profitability()
 
@@ -171,7 +169,7 @@ app_layout = html.Div([
                     x="Avg Profitability",
                     y="Director",
                     orientation="h",
-                    title="Top 10 des réalisateurs avec la plus grande rentabilité moyenne (4+ films)",
+                    title="Top 10 des réalisateurs avec la plus grande rentabilité moyenne (+4 films)",
                     labels={"Avg Profitability": "RSI moyen", "Director": "Réalisateur"},
                     color_discrete_sequence=["#FF0000"]
                 ).update_layout(yaxis={"categoryorder": "total ascending"})
@@ -260,7 +258,7 @@ def update_profitability_graph(_):
         y=moyenne_profitability_df["Moyenne Profitability (%)"],
         mode="markers",
         marker=dict(size=10, color="red", symbol="diamond"),
-        name="Rentabilité moyenne (appuyer pour activer/désactiver)"
+        name="Rentabilité moyenne (+10 films)*appuyer pour activer/désactiver"
     )
 
     fig.add_trace(moyenne_trace)
